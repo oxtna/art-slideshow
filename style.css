@@ -1,31 +1,35 @@
 .carousel-item {
   height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .carousel-item:nth-child(1) {
-  background-color: lime;
+  background-image: url("img/bg1.jpg");
 }
 
 .carousel-item:nth-child(2) {
-  background-color: aqua;
+  background-image: url("img/bg2.jpg");
 }
 
 .carousel-item:nth-child(3) {
-  background-color: violet;
+  background-image: url("img/bg3.jpg");
 }
 
 .carousel-item:nth-child(4) {
-  background-color: cadetblue;
+  background-image: url("img/bg4.jpg");
 }
 
 .carousel-item:nth-child(5) {
-  background-color: coral;
+  background-image: url("img/bg5.jpg");
 }
 
 .carousel-item:nth-child(6) {
-  background-color: crimson;
+  background-image: url("img/bg6.jpg");
 }
 
 .carousel-item:nth-child(7) {
-  background-color: olive;
+  background-image: url("img/bg7.jpg");
 }

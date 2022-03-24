@@ -1,3 +1,24 @@
+@media (min-width: 992px) {
+  .lg-start-0 {
+    left: 0 !important;
+    right: initial !important;
+  }
+
+  .lg-end-0 {
+    left: initial !important;
+    right: 0 !important;
+  }
+}
+
+.flex-gap {
+  gap: 16px;
+}
+
+.overlay {
+  mix-blend-mode: difference;
+  z-index: 20;
+}
+
 .carousel-item {
   height: 100vh;
   width: 100vw;
@@ -32,4 +53,74 @@
 
 .carousel-item:nth-child(7) {
   background-image: url("img/bg7.jpg");
+}
+
+#slideshow {
+  z-index: 10;
+}
+
+#logo {
+  width: 50px;
+  height: 50px;
+}
+
+/* Works only on Chromium-based browsers */
+@property --timer-percentage {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+
+.timer {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: radial-gradient(transparent 65%, white 70%);
+  -webkit-mask-image: conic-gradient(transparent var(--timer-percentage), white 0);
+  mask-image: conic-gradient(transparent var(--timer-percentage), white 0);
+}
+
+.ticking1 {
+  animation: ticking 5.98s linear forwards;
+}
+
+.ticking2 {
+  transform: scaleX(-1);
+  animation: ticking 5.98s linear reverse forwards;
+}
+
+@keyframes ticking {
+  from {
+    --timer-percentage: 0%;
+  }
+  to {
+    --timer-percentage: 100%;
+  }
+}
+
+
+/* Disable for Firefox */
+@-moz-document url-prefix() {
+  .timer {
+    background-image: none;
+    mask-image: none;
+    animation: none;
+  }
+}
+
+@media (min-width: 992px) {
+  #logo {
+    width: 80px;
+    height: 80px;
+  }
+  
+  #logo > img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .timer {
+    width: 80px;
+    height: 80px;
+  }
 }

@@ -8,6 +8,11 @@
     left: initial !important;
     right: 0 !important;
   }
+
+  .lg-bottom-0 {
+    top: initial !important;
+    bottom: 0 !important;
+  }
 }
 
 .flex-gap {
@@ -17,6 +22,22 @@
 .overlay {
   mix-blend-mode: difference;
   z-index: 20;
+}
+
+.carousel-indicators {
+  gap: 0px;
+  mix-blend-mode: difference;
+}
+
+.carousel-indicators > button {
+  opacity: 0 !important;
+  border-radius: 50% !important;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.carousel-indicators > button.active {
+  opacity: 1 !important;
 }
 
 .carousel-item {
@@ -109,6 +130,18 @@
 }
 
 @media (min-width: 992px) {
+  .carousel-indicators {
+    gap: 16px;
+  }
+
+  .carousel-indicators:hover > button {
+    opacity: 0.5 !important;
+  }
+
+  .carousel-indicators > button.active {
+    opacity: 1 !important;
+  }
+
   #logo {
     width: 80px;
     height: 80px;

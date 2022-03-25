@@ -15,3 +15,12 @@ slideshow.addEventListener("slide.bs.carousel", () => {
   }
   isCurrentSlideEven = !isCurrentSlideEven;
 });
+
+// Disable slideshow buttons tapping
+const carouselIndicators = document.querySelector(".carousel-indicators");
+const mql = window.matchMedia("(max-width: 991.98px)");
+mql.addEventListener("change", (e) => {
+  for (const child of carouselIndicators.children) {
+    child.disabled = e.matches;
+  }
+});
